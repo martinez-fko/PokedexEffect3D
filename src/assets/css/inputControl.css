@@ -1,0 +1,55 @@
+.input-control{
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+}
+
+.input-control input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    background: #fff;
+    color: #D93F3F;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+.input-control span{
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: 0.5s;
+    color: #D93F3F;
+}
+
+.input-control input:valid ~ span,
+.input-control input:focus ~ span{
+    color: #fff;
+    transform:  translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #D93F3F;
+    letter-spacing: 0.2em;
+    border-radius: 2px;
+}
+
+.input-control input:valid ,
+.input-control input:focus{
+
+    border: 1px solid #D93F3F;
+}
+
+.input-control button{
+    background: #D93F3F;
+    padding: 10px;
+    height: 50px;
+    border: none;
+    color: #fff;
+    border-radius:  0 5px 5px 0;
+    cursor: pointer;
+}

@@ -1,0 +1,38 @@
+/* =========== styles for footer ========= */
+footer {
+  width: 100%;
+  height: 200px;
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p{
+  color: var(--text-white);
+}
+
+footer .redes{
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 10px;
+}
+
+footer .iconBox{
+  height: 40px;
+  width: 40px;
+  background: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+footer .iconBox:hover{
+  color: #008F7A;
+}
+

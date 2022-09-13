@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+/* ==== CSS VAR ====  */
+:root {
+  --background-color: linear-gradient(
+    90deg,
+    hsla(217, 100%, 50%, 1) 0%,
+    #61efff 100%
+  );
+  --text-white: #000;
+  --text-black: #fff;
+}
+
+/* ====Reset ====  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body.dark {
+  --background-color: #1a1717;
+  --text-white: #fff;
+  --text-black: #000;
+}
+
+/* ==== styles generales =====  */
+.back {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  background: #00c9a7;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.back span {
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.btn-back {
+  margin-top: 20px;
+  width: 100%;
+  background: #ff0000;
+  border: none;
+  height: 30px;
+  border-radius: 7px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* ==== styles for Login ===== */
+.login {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--background-color);
+}
+
+/* =========== styles for icon configuration ========= */
+.icon_config {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-image: url("/img/icons/cogwheel.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition: 2s;
+  z-index: 999;
+}
+
+.icon_config:hover {
+  transform: rotate(365deg);
+}
+
+/* =========== style for page configuration ========= */
+.config {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-color);
+  color: var(--text-white);
+  transition: background 0.5s;
+}
+
+.config__buttons {
+  border: solid #61efff 1px;
+  padding: 20px 50px 50px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0px 0px 169px 10px rgba(0, 201, 168, 0.9);
+}
+
+.config__title {
+  margin-bottom: 10px;
+}
+
+.check-dark {
+  position: relative;
+  width: 80px;
+  height: 40px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.check-icon {
+  position: absolute;
+  transition: 0.5s;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #61efff;
+  color: #f9f871;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+}
+
+.check-icon.active {
+  transform: translateX(100%);
+  color: #000;
+}
+
+.check-icon .bx-moon {
+  display: none;
+}
+.check-icon.active .bx-moon {
+  display: block;
+}
+
+.check-icon.active .bxs-sun {
+  display: none;
+}
+
+/* ============ styles for navbar ========= */
+.navBar {
+  width: 100%;
+  height: 100px;
+}
+
+.navBar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+@media screen and (min-width: 992px) {
+  .navBar {
+    height: 200px;
+  }
+  .navBar img {
+    object-position: bottom;
+  }
+}
+
+/* =========== styles for home/pokedex ========= */
+.actions {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  justify-items: center;
+  padding: 0 20px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.title h2 {
+  color: #ffcb05;
+}
+
+.title h2 span {
+  font-size: 2rem;
+}
+
+.title button {
+  width: 200px;
+}
+
+.container {
+  background: var(--background-color);
+}
+
+/* =========== styles for detail pokemon ========= */
+.detail {
+  width: 80%;
+  margin: 150px auto;
+  border-radius: 5px;
+}
+
+/* --- Colores para la Card ---  */
+.box.normal {
+  background: rgb(190 150 97);
+}
+
+.box.fighting {
+  background-color: rgb(183, 167, 164);
+}
+
+.box.grass {
+  background: rgb(133, 190, 195);
+}
+
+.box.fire {
+  background: rgb(225, 110, 57);
+}
+
+.box.water {
+  background: #92b0d6;
+}
+
+.box.electric {
+  background: #f3d67b;
+}
+
+.box.ground {
+  background: #a78875;
+}
+
+.box.rock {
+  background: #65635f;
+}
+
+.box.bug {
+  background: #86c777;
+}
+
+.box.poison {
+  background: #c1a0c1;
+}
+
+.box.ghost {
+  background: #524957;
+}
+
+.box.ice {
+  background: #69a6d2;
+}
+
+.box.dragon {
+  background: #4da4ba;
+}
+
+.box.psychic {
+  background: #dbc256;
+}
+
+.box.dark {
+  background: #4a5257;
+}
+
+.box.fairy {
+  background: rgb(209, 205, 205);
+}

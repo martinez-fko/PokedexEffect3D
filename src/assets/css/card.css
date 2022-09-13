@@ -1,0 +1,134 @@
+
+.container-card{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    transform-style: preserve-3d;
+    z-index: 20;
+  
+  }
+  
+  .container-card .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+    background: rgb(235, 164, 11);
+    border-radius: 20px;
+    transform-style: preserve-3d;
+  }
+  
+  .container-card .box::before{
+    content: 'Pokemon';
+    position: absolute;
+    top: 0;
+    left: 20px;
+    font-size: 3em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 18;
+  }
+  
+  .container-card .box:hover::before{
+    opacity: 0.08;
+  }
+  
+  .container-card .box .box__name{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+  }
+  
+  .container-card .box:hover .box__name{
+    top: 50px;
+    opacity: 1;
+  }
+  
+  .container-card .box .box__go{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: #fff;
+    background: #333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+    cursor: pointer;
+  }
+  
+  .container-card .box:hover .box__go{
+    bottom: 10px;
+    opacity: 1;
+  }
+  
+  .container-card .box .box__circle{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 90%;
+    height: 200px;
+    border-radius: 20px;
+    transition: 0.5s;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -20px, 50px);
+    z-index: 5;
+  }
+  
+  .container-card .box .box__img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 200px;
+    transition: 0.5s;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%, 50px) ;
+  }
+  
+  .container-card .box:hover .box__img{
+    max-width: 251px;
+    transform: translate3d(-50%,-50%, 250px);
+  
+  
+  }
+  
+  .container-card .box .abilities{
+    position: absolute;
+    bottom: 25px;
+    left: 0;
+    text-align: center;
+    color: #000;
+    width: 100%;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.8em;
+    opacity: 1;
+    font-size: .8rem;
+    text-transform: uppercase;
+  }
+  
+  
+  
+  

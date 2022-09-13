@@ -1,0 +1,50 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 20px;
+}
+.pagination ul{
+    position: relative;
+    background: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
+}
+
+.pagination ul li{
+    list-style: none;
+    line-height: 50px;
+    margin: 5px;
+}
+
+.pagination ul li.pageNumber{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination ul li button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-weight: 600;
+    border-radius: 50%;
+    border: none;
+}
+
+.pagination ul li.pageNumber:hover button,
+ul li.pageNumber.active button{
+    background: #333;
+    color: #fff;
+}
+
