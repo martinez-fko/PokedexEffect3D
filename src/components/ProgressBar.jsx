@@ -9,7 +9,7 @@ const ProgressBar = ({title, percentage , color , max}) => {
                 <p>{percentage} / {max}</p>
             </div>
             <div className="skill">
-                <div className={`skill_level ${color}` } style={{width: percentage}}></div>
+                <div className={`skill_level box ${color}` } style={{width: percentage}}></div>
             </div>
         </div>
     );

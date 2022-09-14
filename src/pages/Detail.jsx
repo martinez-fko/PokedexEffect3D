@@ -32,8 +32,9 @@ const Detail = () => {
 
   return (
     <div className="detail">
-      
-      <header className={ pokemon.types?.[0].type.name ? `detail-box ${pokemon.types?.[0].type.name}` : "detail-box" }  >
+      <button className="back" onClick={back}>back</button>
+      <div className="container-detail">
+        <header className={ pokemon.types?.[0].type.name ? `detail-box box ${pokemon.types?.[0].type.name}` : "detail-box" }  >
         <img src={
                 pokemon.sprites?.other["official-artwork"].front_default
                   ? pokemon.sprites?.other["official-artwork"].front_default
@@ -41,8 +42,8 @@ const Detail = () => {
                   ? pokemon.sprites?.front_default
                   : "/img/desconocido.png"
               } alt="" />
-      </header>
-      <main>
+        </header>
+        <main>
         <h2># {pokemon.id}</h2>
         <h2>{pokemon.name}</h2>
         <div className="features">
@@ -80,7 +81,8 @@ const Detail = () => {
                 />
               ))}
         </section>
-      </main>
+        </main>
+      </div>
     </div>
   );
 };

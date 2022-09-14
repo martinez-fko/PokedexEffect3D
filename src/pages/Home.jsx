@@ -37,18 +37,18 @@ const Home = () => {
   const changeCategory = (category, url) => {
     if (category === "All") {
       dispatch(getAllPokemonsThunk());
-      setSelected('All')
+      setSelected("All");
     } else {
       setSelected(category);
       dispatch(getAllPokemonsByTypeThunk(url));
     }
     dispatch(setCurrentPage(1));
-    setcurrentNumber(1)
+    setcurrentNumber(1);
   };
 
-  const changeNumber = number => {
-      setcurrentNumber(number)
-  }
+  const changeNumber = (number) => {
+    setcurrentNumber(number);
+  };
 
   const convertOptions = () => {
     const optionsType = [{ name: "All", id: "All" }];
@@ -61,10 +61,12 @@ const Home = () => {
   return (
     <main className="container">
       <div className="title">
-        <h2>Welcome <span>{trainer}</span>, here you can find your favorite
-          pokemon</h2>
-          <button className="btn-back" onClick={() => navigate(-1)}>
-          Back
+        <h2>
+          Welcome <span>{trainer}</span>, here you can find your favorite
+          pokemon
+        </h2>
+        <button className="btn-back" onClick={() => navigate(-1)}>
+          Log Out
         </button>
       </div>
       <section className="actions">
@@ -82,7 +84,7 @@ const Home = () => {
         />
       </section>
       <Cards />
-      <Pagination currentNumber={currentNumber} changeNumber={changeNumber}/>
+      <Pagination currentNumber={currentNumber} changeNumber={changeNumber} />
     </main>
   );
 };

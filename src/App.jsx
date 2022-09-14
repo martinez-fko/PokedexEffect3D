@@ -2,10 +2,12 @@ import { HashRouter, Link, Route, Routes } from "react-router-dom";
 import ProtectedRoutes from "./components/ProtectedRoutes";
 import MainLayout from "./layouts/MainLayout";
 import { Login, Config, Home, Detail } from "./pages";
+import {useSelector} from 'react-redux';
+import Loading from "./components/Loading";
 
 function App() {
-  //? isLoading isDark itemPerPage trainner pokemons
-  
+  const isLoading = useSelector(state => state.isLoading)
+  console.log(isLoading);
   return (
     <HashRouter>
       <Routes>

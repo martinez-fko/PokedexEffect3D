@@ -27,11 +27,18 @@ const CardItem = ({ url }) => {
         Pokedex
       </Link>
       <div className="box__circle"></div>
-      <img
-        src={pokemon.sprites?.other["official-artwork"].front_default}
+      {pokemon.sprites?.other["official-artwork"].front_default ? (
+        <img
+          src={pokemon.sprites?.other["official-artwork"].front_default}
+          alt={pokemon.name}
+          className="box__img"
+        />
+      ): (<img
+        src='/img/desconocido.png'
         alt={pokemon.name}
         className="box__img"
-      />
+      />)}
+
       <div className="abilities">
         <div className="rigth">
           <p>{pokemon.stats?.[0].stat?.name}</p>
