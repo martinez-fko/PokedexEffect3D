@@ -30,6 +30,8 @@ footer .iconBox{
   font-size: 1.8rem;
   cursor: pointer;
   transition: 0.5s;
+  text-decoration: none;
+  color: black;
 }
 
 footer .iconBox:hover{

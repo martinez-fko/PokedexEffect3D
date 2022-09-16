@@ -34,7 +34,7 @@ const CardItem = ({ url }) => {
           className="box__img"
         />
       ): (<img
-        src='/img/desconocido.png'
+        src='/img/ball.png'
         alt={pokemon.name}
         className="box__img"
       />)}

@@ -1,12 +1,14 @@
 .loading{
-    position: relative;
-    top: 0;
-    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    background: #fff;
+    z-index: 999;
+    opacity: .7;
 }
 
 .loading .box{
@@ -21,12 +23,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(/images/pokeball.png);
+    background-image: url(/img/pokeball.png);
     background-size: cover;
     animation: animate 3s linear infinite;
 }
 .loading .box .circle:nth-child(2) {
-    background-image: url(/images/pokeball.png);
+    background-image: url(/img/pokeball.png);
     animation-delay: -1.5s;
 }
 
@@ -50,7 +52,7 @@
 }
 
 .loading h2{
-    margin-top: 20px;
+    margin-top: 10px;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 4px;
